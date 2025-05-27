@@ -1,36 +1,72 @@
 """
 CP1404/CP5632 - Practical
 Broken program to determine score status
-"""
-
-# TODO: Fix this!
-"""
-get score
-if score < 0 or score >100
-    display error message
-else if score > 90
-    display "Excellent"
-else if score > 50
-    display"Passable"
-else
-    display"Bad"
-"""
 MINIMUM_SCORE = 0
 MAXIMUM_SCORE = 100
 EXCELLENT_THRESHOLD = 90
 PASS_THRESHOLD = 50
-message = ""
 
-score = float(input("Enter score: "))
+function main()
+    get score
+    message = determine_level(score)
+    display message
+    random_score = generate_random_score()
+    message = determine_level(random_score)
+    display message
 
-# Based on user input, determine the classification of the score and print the result.
-if score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
-    print("Invalid score")
-else:
-    if score >= EXCELLENT_THRESHOLD:
-        message = "Excellent"
-    elif score >= PASS_THRESHOLD:
-        message = "Passable"
-    else:
-        message = "Bad"
+
+function determine_level(score)
+    if score < MINIMUM_SCORE or score > MAXIMUM_SCORE
+    return "Invalid score"
+    else
+        if score >= EXCELLENT_THRESHOLD
+            return "Excellent"
+        else if score >= PASS_THRESHOLD
+            return "Passable"
+        else
+            return "Bad"
+
+
+function generate_random_score()
+    random_score = random choose a number from 0 to 100
+    return random_score
+
+
+main()
+"""
+from random import *
+MINIMUM_SCORE = 0
+MAXIMUM_SCORE = 100
+EXCELLENT_THRESHOLD = 90
+PASS_THRESHOLD = 50
+
+def main():
+    """display level based on user input and random score"""
+    score = float(input("Enter score: "))
+    message = determine_level(score)
     print(message)
+    random_score = generate_random_score()
+    message = determine_level(random_score)
+    print(message)
+
+
+def determine_level(score):
+    """determine level based on score"""
+    if score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
+        return "Invalid score"
+    else:
+        if score >= EXCELLENT_THRESHOLD:
+            return "Excellent"
+        elif score >= PASS_THRESHOLD:
+            return "Passable"
+        else:
+            return "Bad"
+
+
+def generate_random_score():
+    """return random score"""
+    random_score = randint(0,100)
+    return random_score
+
+
+main()
