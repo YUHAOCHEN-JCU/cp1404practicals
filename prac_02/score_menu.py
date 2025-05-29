@@ -1,7 +1,10 @@
 """
-MENU = ("(G)et a valid score (must be 0-100 inclusive)\n"
-            "(P)rint result (copy or your function to determine the result from importscore.py))\n"
-            "(S)how stars (this should print as many stars as the score)(Q)uit")
+CP1404/CP5632 - Practical
+Display menu and get user input to get valid score or print result or show stars or quit.
+MENU = "(G)et a valid score (must be 0-100 inclusive)"
+        "(P)rint result"
+        "(S)how stars (this should print as many stars as the score)"
+        "(Q)uit"
 MINIMUM_SCORE = 0
 MAXIMUM_SCORE = 100
 EXCELLENT_THRESHOLD = 90
@@ -53,15 +56,17 @@ function print_star(score)
     return "score" of "*"
 """
 MENU = ("(G)et a valid score (must be 0-100 inclusive)\n"
-            "(P)rint result (copy or your function to determine the result from importscore.py))\n"
-            "(S)how stars (this should print as many stars as the score)(Q)uit")
+        "(P)rint result\n"
+        "(S)how stars (this should print as many stars as the score)\n"
+        "(Q)uit")
 MINIMUM_SCORE = 0
 MAXIMUM_SCORE = 100
 EXCELLENT_THRESHOLD = 90
 PASS_THRESHOLD = 50
 
+
 def main():
-    """display menu and do GPS based on user choice"""
+    """Display menu and do GPS based on user choice"""
     print(MENU)
     choice = input("Please enter your choice: ").upper()
     while choice != "Q":
@@ -84,7 +89,7 @@ def main():
 
 
 def get_score():
-    """get user score based on user input"""
+    """Get user score based on user input"""
     score = float(input("Enter score: "))
     while score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         print("Invalid score")
@@ -93,7 +98,7 @@ def get_score():
 
 
 def determine_level(score):
-    """determine level based on score"""
+    """Determine level based on score"""
     if score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         return "Invalid score"
     else:
@@ -106,7 +111,7 @@ def determine_level(score):
 
 
 def print_star(score):
-    """print star based on user score"""
+    """Print star based on user score"""
     return int(score) * "*"
 
 
