@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 - Practical
-Broken program to determine score status
+Broken program to determine score status, display level based on user input and random score.
 MINIMUM_SCORE = 0
 MAXIMUM_SCORE = 100
 EXCELLENT_THRESHOLD = 90
@@ -35,13 +35,15 @@ function generate_random_score()
 main()
 """
 from random import *
+
 MINIMUM_SCORE = 0
 MAXIMUM_SCORE = 100
 EXCELLENT_THRESHOLD = 90
 PASS_THRESHOLD = 50
 
+
 def main():
-    """display level based on user input and random score"""
+    """Display level based on user input and random score"""
     score = float(input("Enter score: "))
     message = determine_level(score)
     print(message)
@@ -51,7 +53,7 @@ def main():
 
 
 def determine_level(score):
-    """determine level based on score"""
+    """Determine level based on score"""
     if score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         return "Invalid score"
     else:
@@ -64,8 +66,8 @@ def determine_level(score):
 
 
 def generate_random_score():
-    """return random score"""
-    random_score = randint(0,100)
+    """Return random score"""
+    random_score = randint(0, 100)
     return random_score
 
 
