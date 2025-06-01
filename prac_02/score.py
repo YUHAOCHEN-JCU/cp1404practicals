@@ -12,7 +12,7 @@ function main()
     display message
     random_score = generate_random_score()
     message = determine_level(random_score)
-    display message
+    display random score, message
 
 
 function determine_level(score)
@@ -49,6 +49,7 @@ def main():
     print(message)
     random_score = generate_random_score()
     message = determine_level(random_score)
+    print(f"Random score is {random_score}")
     print(message)
 
 
