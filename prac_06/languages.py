@@ -1,3 +1,19 @@
+"""
+python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
+ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
+visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
+display python
+
+languages contains python, ruby, visual_basic
+
+display "The dynamically typed languages are:"
+repeat lang in languages
+    if lang is dynamic
+        print lang of name
+
+repeat lang in languages
+    display lang
+"""
 from programming_language import ProgrammingLanguage
 
 # Create ProgrammingLanguage objects
