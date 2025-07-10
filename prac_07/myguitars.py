@@ -1,3 +1,41 @@
+"""
+function main()
+    guitars = load_guitars()
+    display "guitars list"
+    repeat guitar in guitars
+        display guitar
+    display "Please input guitar's information"
+    get name
+    while name
+        get year, cost
+        guitar = Guitar(name, year, cost)
+        append guitar in guitars
+        display guitar
+        save_guitars(guitars)
+        display"data has been saved in guitars.csv"
+
+
+function load_guitars()
+    guitars is an empty list
+    try
+        with open "guitars.csv" and read as file
+            for line in file
+                output name, year, cost
+                guitars append(Guitar(name, int(year), float(cost)))
+    except FileNotFoundError
+        display error message
+    return guitars
+
+
+function save_guitars(guitars)
+    with open "guitar.csv" and write as file:
+        repeat guitar in guitars
+            write name, year, cost in file
+
+
+main()
+
+"""
 from guitar import Guitar
 
 
