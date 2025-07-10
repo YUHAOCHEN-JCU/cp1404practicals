@@ -40,6 +40,7 @@ from guitar import Guitar
 
 
 def main():
+    """The main function that drives the guitar data management process."""
     guitars = load_guitars()
     print("guitars list")
     for guitar in guitars:
@@ -59,6 +60,7 @@ def main():
 
 
 def load_guitars():
+    """Load guitar data from guitars.csv"""
     guitars = []
     try:
         with open("guitars.csv", "r") as file:
@@ -71,6 +73,7 @@ def load_guitars():
 
 
 def save_guitars(guitars):
+    """Save guitars data"""
     with open("guitar.csv", "w") as file:
         for guitar in guitars:
             file.write(f"{guitar.name}, {guitar.year}, {guitar.cost}\n")
