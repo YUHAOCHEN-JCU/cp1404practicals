@@ -2,6 +2,53 @@
 CP1404/CP5632 Practical
 File and class example - opens/reads a file, stores in objects of custom class
 (contains multiple versions for demonstration: using csv and namedtuple)
+function main()
+    languages is an empty list
+    in file = open 'languages.csv' and read
+    readline in in_file
+    repeat line in in_file
+        output parts
+        pointer_arithmetic = parts[4] == "Yes"
+        reflection = parts[2] == "Yes"
+        language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]), pointer_arithmetic)
+        append language in languages
+    close in_file
+    repeat language in languages
+        display language
+
+
+main()
+
+
+function using_csv()
+    in_file = open 'languages.csv' and read and newline=''
+    readline in in_file
+    reader = csv.reader(in_file)
+    repeat row in reader
+        display row
+    close in_file
+
+
+function using_namedtuple()
+    in_file = open 'languages.csv' and read and newline=''
+    file_field_names = readline in in_file
+    display file_field_names
+    Language = namedtuple('Language', 'name, typing, reflection, year')
+    reader = csv.reader(in_file)
+    repeat row in reader
+        display row
+        language = Language._make(row)
+        print(repr(language))
+    close in_file
+
+
+function using_csv_namedtuple()
+    Language = namedtuple('Language', 'name, typing, reflection, year')
+    in_file = open "languages.csv" and read
+    readline in in_file
+    repeat language in map(Language._make, csv.reader(in_file))
+        display language.name, 'was released in', language.year
+        print(repr(language))
 """
 
 import csv
