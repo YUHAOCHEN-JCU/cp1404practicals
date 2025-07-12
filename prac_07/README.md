@@ -14,8 +14,6 @@ Consistent Formatting: Maintain consistent indentation, spacing, and line length
 
 ## Helpful Links
 
-[Programming Patterns]
-CP1404/Starter: CP1404 IT@JCU Programming Guides
-[CP1404 Practicals Instructions]
-YUHAOCHEN-JCU/cp1404practicals 
+[Programming Patterns]CP1404/Starter: CP1404 IT@JCU Programming Guides
 
+[CP1404 Practicals Instructions]YUHAOCHEN-JCU/cp1404practicals 
