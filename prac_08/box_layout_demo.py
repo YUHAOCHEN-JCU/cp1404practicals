@@ -18,7 +18,7 @@ class BoxLayoutDemo(App):
         self.root.ids.output_label.text = f"Hello {self.root.ids.input_name.text}"
 
     def handle_clear(self):
-         """Clear the input TextInput and output Label."""
+        """Clear the input TextInput and output Label."""
         self.root.ids.input_name.text = ""
         self.root.ids.output_label.text = ""
 
