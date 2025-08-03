@@ -28,13 +28,13 @@ Provide proper Markdown links (not bare URLs) to two (2) PRs that show you doing
 For each one, write a short explanation of what was good about your review.
 
 ### Good Code Review 1
-complete all by ZhihaoTang615 路 Pull Request #3 路 ZhihaoTang615/cp1404practical
+complete all by ZhihaoTang615 · Pull Request #3 · ZhihaoTang615/cp1404practical
 
 ### Explanation
 I pointed out the issue of unclear variable naming and suggested using more descriptive names, such as changing `x` to `number_of_items`. This improved the readability of the code and helped developers understand the code's intent faster.
 
 ### Good Code Review 2
-Prac 05 feedback by saikokokyaw 路 Pull Request #1 路 saikokokyaw/CP1404practicals
+Prac 05 feedback by saikokokyaw · Pull Request #1 · saikokokyaw/CP1404practicals
 
 ### Explanation
 I found that the function did not handle errors and suggested adding a try-except block to handle file read and write errors. This suggestion enhanced the robustness of the code, making it more reliable in real-world scenarios.
@@ -46,6 +46,5 @@ I will add a section called 'Code Optimization Challenge' to each practical task
 
 ### What did you do really well for practicals in this subject?
 I do quite well in following the code style guidelines (PEP8) and writing clear comments. I am also good at learning from mistakes and can actively reflect on and adjust my coding methods after each submission.
-
 
 
